@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function validate()
+        {
+            var password=document.myForm.password.value;
+            var confirmPass=document.myForm.confirmPass.value;
+            if(password!=confirmPass)
+                alert("Password doesn't match");
+          }
+    </script>
+
+</head>
+<body>
+
+<form name="myForm" onsubmit="validate()">
+    <table>
+        <tr><th align="left">Name</th></tr>
+        <tr><td><input type="text" name="firstName" placeholder="First" pattern="[a-zA-Z]{1,}" required/></td>
+            <td><input type="text" name="lastName" placeholder="Last" pattern="[a-zA-Z]{1,}" required/></td></tr>
+        <tr><th colspan="2" align="left">Choose your username</th></tr>
+        <tr><td colspan="2"><input type="text" name="userName" required/></td></tr>
+        <tr><th colspan="2" align="left">Create a password</th></tr>
+        <tr><td colspan="2"><input type="password" name="password" required/></td></tr>
+        <tr><th colspan="2" align="left">Confirm your password</th></tr>
+        <tr><td colspan="2"><input type="password" name="confirmPass" required/></td></tr>
+        <tr><th colspan="2" align="left">Birthday</th> </tr>
+        <tr><td colspan="2"><input type="date" name="birthday" required/></td> </tr>
+        <tr><th colspan="2" align="left">Gender</th></tr>
+        <tr><td colspan="2"><select required>
+            <option value="">I am...</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+            </select></td> </tr>
+        <tr><th colspan="2" align="left">Mobile Phone</th> </tr>
+        <tr><td colspan="2"><input type="text" name="phone" pattern="[1-9][0-9]{9}" required></td></tr>
+        <tr><th colspan="2" align="left">Your Current Email Address</th> </tr>
+        <tr><td colspan="2"><input type="email" name="currEmail" required></td></tr>
+        <tr><th colspan="2" align="left">Location</th></tr>
+        <tr><td colspan="2"><select required>
+            <option value="">I am from...</option>
+            <option value="India">India</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="Australia">Australia</option>
+        </select></td> </tr>
+        <tr><td colspan="2"><input type="submit" value="Continue"></td> </tr>
+    </table>
+</form>
+</body>
+</html>
